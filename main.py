@@ -2,7 +2,7 @@ import mss  # mss (Multiple ScreenShots) is an ultra-fast, cross-platform librar
 import cv2
 import numpy as np
 
-fps = 10
+fps = 20
 update_interval = int(1000/fps) #thousand mili second (1 sec) / fps , delay must be in int
     
 # pre-create window ONCE before the loop with a unique handle
@@ -17,7 +17,7 @@ with mss.mss() as sct:
 
          #convert image form BGRA Blue, Green, Red, and Alpha/opacity (mss format) to BRG (opencv format)
         img_bgr = cv2.cvtColor(img,cv2.COLOR_BGRA2BGR)
-        cv2.imshow("Screen Capture",img_bgr)
+        cv2.imshow("Screen Capture",img_bgr)  #when opencv finds an existing window with name "Screen Capture" it updates that window without creating a new one
 
         key = cv2.waitKey(update_interval) & 0xFF
         if key == ord('q'): #program will wait for some time and if q is not pressed next loop will continue

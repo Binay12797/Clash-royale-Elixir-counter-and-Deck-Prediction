@@ -1,0 +1,11 @@
+Tools
+mss
+opencv-python
+numpy
+pyautogui (optional)
+Tasks
+Capture live screen frames using mss.mss() in a loop, convert to numpy array for OpenCV
+Use cv2.rectangle + mouse callback to draw and save ROI coordinates for: game timer, opponent's half of arena, card deploy zones
+Save ROI config to a JSON file so you can reload without recalibrating
+Test that crops update correctly when the game window moves or resizes
+Handle both phone-mirroring (scrcpy) and emulator (BlueStacks/LDPlayer) window sizes
