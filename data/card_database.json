@@ -1,0 +1,634 @@
+{
+  "_meta": {
+    "total_cards": 115,
+    "last_updated": "2026-04",
+    "notes": "ability_type values: none, periodic_spawn, on_deploy_spawn, on_death_spawn, area_damage, dash, passive_aura, self_destruct, building_spawn, champion_ability",
+    "deploy_side values": "any (can land anywhere), opponent (always opponent half), our (always our half)"
+  },
+  "cards": {
+    "knight": {
+      "elixir_cost": 3, "type": "troop", "rarity": "common",
+      "targets": "ground", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "knight.png"
+    },
+    "archers": {
+      "elixir_cost": 3, "type": "troop", "rarity": "common",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "archers.png"
+    },
+    "goblins": {
+      "elixir_cost": 2, "type": "troop", "rarity": "common",
+      "targets": "ground", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "goblins.png"
+    },
+    "giant": {
+      "elixir_cost": 5, "type": "troop", "rarity": "rare",
+      "targets": "buildings", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "giant.png"
+    },
+    "prince": {
+      "elixir_cost": 5, "type": "troop", "rarity": "epic",
+      "targets": "ground", "deploy_side": "opponent",
+      "ability": { "type": "dash", "trigger": "on_charge" },
+      "template_file": "prince.png"
+    },
+    "witch": {
+      "elixir_cost": 5, "type": "troop", "rarity": "epic",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "periodic_spawn", "spawns": "skeletons", "count": 3, "interval_sec": 7 },
+      "template_file": "witch.png"
+    },
+    "skeleton_army": {
+      "elixir_cost": 3, "type": "troop", "rarity": "epic",
+      "targets": "ground", "deploy_side": "any",
+      "ability": { "type": "none" },
+      "template_file": "skeleton_army.png"
+    },
+    "minions": {
+      "elixir_cost": 3, "type": "troop", "rarity": "common",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "minions.png"
+    },
+    "minion_horde": {
+      "elixir_cost": 5, "type": "troop", "rarity": "common",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "minion_horde.png"
+    },
+    "balloon": {
+      "elixir_cost": 5, "type": "troop", "rarity": "epic",
+      "targets": "buildings", "deploy_side": "opponent",
+      "ability": { "type": "on_death_spawn", "spawns": "skeletons", "count": 1 },
+      "template_file": "balloon.png"
+    },
+    "wizard": {
+      "elixir_cost": 5, "type": "troop", "rarity": "rare",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "wizard.png"
+    },
+    "valkyrie": {
+      "elixir_cost": 4, "type": "troop", "rarity": "rare",
+      "targets": "ground", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "valkyrie.png"
+    },
+    "skeleton_dragons": {
+      "elixir_cost": 4, "type": "troop", "rarity": "common",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "skeleton_dragons.png"
+    },
+    "musketeer": {
+      "elixir_cost": 4, "type": "troop", "rarity": "rare",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "musketeer.png"
+    },
+    "baby_dragon": {
+      "elixir_cost": 4, "type": "troop", "rarity": "epic",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "baby_dragon.png"
+    },
+    "pekka": {
+      "elixir_cost": 7, "type": "troop", "rarity": "epic",
+      "targets": "ground", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "pekka.png"
+    },
+    "mini_pekka": {
+      "elixir_cost": 4, "type": "troop", "rarity": "rare",
+      "targets": "ground", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "mini_pekka.png"
+    },
+    "hog_rider": {
+      "elixir_cost": 4, "type": "troop", "rarity": "rare",
+      "targets": "buildings", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "hog_rider.png"
+    },
+    "spear_goblins": {
+      "elixir_cost": 2, "type": "troop", "rarity": "common",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "spear_goblins.png"
+    },
+    "barbarians": {
+      "elixir_cost": 5, "type": "troop", "rarity": "common",
+      "targets": "ground", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "barbarians.png"
+    },
+    "giant_skeleton": {
+      "elixir_cost": 6, "type": "troop", "rarity": "epic",
+      "targets": "ground", "deploy_side": "opponent",
+      "ability": { "type": "on_death_spawn", "spawns": "bomb", "delay_sec": 3 },
+      "template_file": "giant_skeleton.png"
+    },
+    "three_musketeers": {
+      "elixir_cost": 9, "type": "troop", "rarity": "rare",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "three_musketeers.png"
+    },
+    "lava_hound": {
+      "elixir_cost": 7, "type": "troop", "rarity": "legendary",
+      "targets": "buildings", "deploy_side": "opponent",
+      "ability": { "type": "on_death_spawn", "spawns": "lava_pups", "count": 6 },
+      "template_file": "lava_hound.png"
+    },
+    "ice_wizard": {
+      "elixir_cost": 3, "type": "troop", "rarity": "legendary",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "ice_wizard.png"
+    },
+    "princess": {
+      "elixir_cost": 3, "type": "troop", "rarity": "legendary",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "princess.png"
+    },
+    "dark_prince": {
+      "elixir_cost": 4, "type": "troop", "rarity": "epic",
+      "targets": "ground", "deploy_side": "opponent",
+      "ability": { "type": "dash", "trigger": "on_charge" },
+      "template_file": "dark_prince.png"
+    },
+    "guards": {
+      "elixir_cost": 3, "type": "troop", "rarity": "epic",
+      "targets": "ground", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "guards.png"
+    },
+    "miner": {
+      "elixir_cost": 3, "type": "troop", "rarity": "legendary",
+      "targets": "ground", "deploy_side": "any",
+      "ability": { "type": "none" },
+      "template_file": "miner.png"
+    },
+    "golem": {
+      "elixir_cost": 8, "type": "troop", "rarity": "epic",
+      "targets": "buildings", "deploy_side": "opponent",
+      "ability": { "type": "on_death_spawn", "spawns": "golemites", "count": 2 },
+      "template_file": "golem.png"
+    },
+    "night_witch": {
+      "elixir_cost": 4, "type": "troop", "rarity": "legendary",
+      "targets": "ground", "deploy_side": "opponent",
+      "ability": { "type": "periodic_spawn", "spawns": "bats", "count": 2, "interval_sec": 5 },
+      "template_file": "night_witch.png"
+    },
+    "bandit": {
+      "elixir_cost": 3, "type": "troop", "rarity": "legendary",
+      "targets": "ground", "deploy_side": "opponent",
+      "ability": { "type": "dash", "trigger": "on_charge" },
+      "template_file": "bandit.png"
+    },
+    "royal_ghost": {
+      "elixir_cost": 3, "type": "troop", "rarity": "legendary",
+      "targets": "ground", "deploy_side": "opponent",
+      "ability": { "type": "passive_aura", "effect": "invisibility_until_attack" },
+      "template_file": "royal_ghost.png"
+    },
+    "mega_knight": {
+      "elixir_cost": 7, "type": "troop", "rarity": "legendary",
+      "targets": "ground", "deploy_side": "opponent",
+      "ability": { "type": "on_deploy_spawn", "effect": "jump_slam_aoe" },
+      "template_file": "mega_knight.png"
+    },
+    "electro_wizard": {
+      "elixir_cost": 4, "type": "troop", "rarity": "legendary",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "on_deploy_spawn", "effect": "stun_reset_on_deploy" },
+      "template_file": "electro_wizard.png"
+    },
+    "inferno_dragon": {
+      "elixir_cost": 4, "type": "troop", "rarity": "legendary",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "inferno_dragon.png"
+    },
+    "sparky": {
+      "elixir_cost": 6, "type": "troop", "rarity": "legendary",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "sparky.png"
+    },
+    "fisherman": {
+      "elixir_cost": 3, "type": "troop", "rarity": "legendary",
+      "targets": "ground", "deploy_side": "opponent",
+      "ability": { "type": "passive_aura", "effect": "hook_pull" },
+      "template_file": "fisherman.png"
+    },
+    "magic_archer": {
+      "elixir_cost": 4, "type": "troop", "rarity": "legendary",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "magic_archer.png"
+    },
+    "elixir_golem": {
+      "elixir_cost": 3, "type": "troop", "rarity": "rare",
+      "targets": "buildings", "deploy_side": "opponent",
+      "ability": { "type": "on_death_spawn", "spawns": "elixir_golemites", "note": "gives opponent elixir on death" },
+      "template_file": "elixir_golem.png"
+    },
+    "battle_healer": {
+      "elixir_cost": 4, "type": "troop", "rarity": "rare",
+      "targets": "ground", "deploy_side": "opponent",
+      "ability": { "type": "passive_aura", "effect": "aoe_heal_nearby_allies" },
+      "template_file": "battle_healer.png"
+    },
+    "firecracker": {
+      "elixir_cost": 3, "type": "troop", "rarity": "common",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "firecracker.png"
+    },
+    "electro_giant": {
+      "elixir_cost": 7, "type": "troop", "rarity": "epic",
+      "targets": "buildings", "deploy_side": "opponent",
+      "ability": { "type": "passive_aura", "effect": "zap_attackers" },
+      "template_file": "electro_giant.png"
+    },
+    "goblin_giant": {
+      "elixir_cost": 6, "type": "troop", "rarity": "epic",
+      "targets": "buildings", "deploy_side": "opponent",
+      "ability": { "type": "on_deploy_spawn", "spawns": "spear_goblins", "count": 2 },
+      "template_file": "goblin_giant.png"
+    },
+    "royal_giant": {
+      "elixir_cost": 6, "type": "troop", "rarity": "common",
+      "targets": "buildings", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "royal_giant.png"
+    },
+    "elite_barbarians": {
+      "elixir_cost": 6, "type": "troop", "rarity": "common",
+      "targets": "ground", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "elite_barbarians.png"
+    },
+    "bowler": {
+      "elixir_cost": 5, "type": "troop", "rarity": "epic",
+      "targets": "ground", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "bowler.png"
+    },
+    "executioner": {
+      "elixir_cost": 5, "type": "troop", "rarity": "epic",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "executioner.png"
+    },
+    "cannon_cart": {
+      "elixir_cost": 5, "type": "troop", "rarity": "epic",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "cannon_cart.png"
+    },
+    "flying_machine": {
+      "elixir_cost": 4, "type": "troop", "rarity": "rare",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "flying_machine.png"
+    },
+    "hunter": {
+      "elixir_cost": 4, "type": "troop", "rarity": "epic",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "hunter.png"
+    },
+    "mega_minion": {
+      "elixir_cost": 3, "type": "troop", "rarity": "rare",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "mega_minion.png"
+    },
+    "ice_golem": {
+      "elixir_cost": 2, "type": "troop", "rarity": "rare",
+      "targets": "ground", "deploy_side": "opponent",
+      "ability": { "type": "on_death_spawn", "effect": "slow_aoe" },
+      "template_file": "ice_golem.png"
+    },
+    "dart_goblin": {
+      "elixir_cost": 3, "type": "troop", "rarity": "rare",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "dart_goblin.png"
+    },
+    "goblin_gang": {
+      "elixir_cost": 3, "type": "troop", "rarity": "common",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "goblin_gang.png"
+    },
+    "rascals": {
+      "elixir_cost": 5, "type": "troop", "rarity": "common",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "rascals.png"
+    },
+    "heal_spirit": {
+      "elixir_cost": 1, "type": "troop", "rarity": "common",
+      "targets": "ground", "deploy_side": "opponent",
+      "ability": { "type": "on_deploy_spawn", "effect": "heal_aoe_on_jump" },
+      "template_file": "heal_spirit.png"
+    },
+    "ice_spirit": {
+      "elixir_cost": 1, "type": "troop", "rarity": "common",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "on_deploy_spawn", "effect": "freeze_aoe_on_jump" },
+      "template_file": "ice_spirit.png"
+    },
+    "fire_spirit": {
+      "elixir_cost": 1, "type": "troop", "rarity": "common",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "on_deploy_spawn", "effect": "fire_aoe_on_jump" },
+      "template_file": "fire_spirit.png"
+    },
+    "electro_spirit": {
+      "elixir_cost": 1, "type": "troop", "rarity": "common",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "on_deploy_spawn", "effect": "chain_zap_on_jump" },
+      "template_file": "electro_spirit.png"
+    },
+    "skeletons": {
+      "elixir_cost": 1, "type": "troop", "rarity": "common",
+      "targets": "ground", "deploy_side": "any",
+      "ability": { "type": "none" },
+      "template_file": "skeletons.png"
+    },
+    "bats": {
+      "elixir_cost": 2, "type": "troop", "rarity": "common",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "bats.png"
+    },
+    "skeleton_barrel": {
+      "elixir_cost": 3, "type": "troop", "rarity": "common",
+      "targets": "buildings", "deploy_side": "opponent",
+      "ability": { "type": "on_death_spawn", "spawns": "skeletons", "count": 6 },
+      "template_file": "skeleton_barrel.png"
+    },
+    "wall_breakers": {
+      "elixir_cost": 2, "type": "troop", "rarity": "rare",
+      "targets": "buildings", "deploy_side": "opponent",
+      "ability": { "type": "self_destruct", "effect": "explode_on_reach" },
+      "template_file": "wall_breakers.png"
+    },
+    "bomber": {
+      "elixir_cost": 2, "type": "troop", "rarity": "common",
+      "targets": "ground", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "bomber.png"
+    },
+    "royal_hogs": {
+      "elixir_cost": 5, "type": "troop", "rarity": "rare",
+      "targets": "buildings", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "royal_hogs.png"
+    },
+    "zappies": {
+      "elixir_cost": 4, "type": "troop", "rarity": "rare",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "zappies.png"
+    },
+    "royal_recruits": {
+      "elixir_cost": 7, "type": "troop", "rarity": "common",
+      "targets": "ground", "deploy_side": "opponent",
+      "ability": { "type": "none" },
+      "template_file": "royal_recruits.png"
+    },
+    "electro_dragon": {
+      "elixir_cost": 5, "type": "troop", "rarity": "epic",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "passive_aura", "effect": "chain_lightning" },
+      "template_file": "electro_dragon.png"
+    },
+    "golden_knight": {
+      "elixir_cost": 4, "type": "troop", "rarity": "champion",
+      "targets": "ground", "deploy_side": "opponent",
+      "ability": { "type": "champion_ability", "effect": "dash_chain_lightning", "elixir_cost": 2 },
+      "template_file": "golden_knight.png"
+    },
+    "skeleton_king": {
+      "elixir_cost": 4, "type": "troop", "rarity": "champion",
+      "targets": "ground", "deploy_side": "opponent",
+      "ability": { "type": "champion_ability", "effect": "soul_collect_summon_skeletons", "elixir_cost": 3 },
+      "template_file": "skeleton_king.png"
+    },
+    "archer_queen": {
+      "elixir_cost": 5, "type": "troop", "rarity": "champion",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "champion_ability", "effect": "cloak_and_fast_attack", "elixir_cost": 2 },
+      "template_file": "archer_queen.png"
+    },
+    "monk": {
+      "elixir_cost": 5, "type": "troop", "rarity": "champion",
+      "targets": "ground", "deploy_side": "opponent",
+      "ability": { "type": "champion_ability", "effect": "deflect_projectiles", "elixir_cost": 2 },
+      "template_file": "monk.png"
+    },
+    "little_prince": {
+      "elixir_cost": 3, "type": "troop", "rarity": "champion",
+      "targets": "ground_and_air", "deploy_side": "opponent",
+      "ability": { "type": "champion_ability", "effect": "summon_guard", "elixir_cost": 2 },
+      "template_file": "little_prince.png"
+    },
+    "boss_bandit": {
+      "elixir_cost": 6, "type": "troop", "rarity": "champion",
+      "targets": "ground", "deploy_side": "opponent",
+      "ability": { "type": "champion_ability", "effect": "dash_and_stun", "elixir_cost": 2 },
+      "template_file": "boss_bandit.png"
+    },
+    "fireball": {
+      "elixir_cost": 4, "type": "spell", "rarity": "rare",
+      "targets": "ground_and_air", "deploy_side": "any",
+      "ability": { "type": "area_damage" },
+      "template_file": "fireball.png"
+    },
+    "arrows": {
+      "elixir_cost": 3, "type": "spell", "rarity": "common",
+      "targets": "ground_and_air", "deploy_side": "any",
+      "ability": { "type": "area_damage" },
+      "template_file": "arrows.png"
+    },
+    "zap": {
+      "elixir_cost": 2, "type": "spell", "rarity": "common",
+      "targets": "ground_and_air", "deploy_side": "any",
+      "ability": { "type": "area_damage", "effect": "stun" },
+      "template_file": "zap.png"
+    },
+    "rocket": {
+      "elixir_cost": 6, "type": "spell", "rarity": "rare",
+      "targets": "ground_and_air", "deploy_side": "any",
+      "ability": { "type": "area_damage" },
+      "template_file": "rocket.png"
+    },
+    "lightning": {
+      "elixir_cost": 6, "type": "spell", "rarity": "epic",
+      "targets": "ground_and_air", "deploy_side": "any",
+      "ability": { "type": "area_damage", "hits": 3 },
+      "template_file": "lightning.png"
+    },
+    "freeze": {
+      "elixir_cost": 4, "type": "spell", "rarity": "epic",
+      "targets": "ground_and_air", "deploy_side": "any",
+      "ability": { "type": "area_damage", "effect": "freeze", "duration_sec": 3.5 },
+      "template_file": "freeze.png"
+    },
+    "poison": {
+      "elixir_cost": 4, "type": "spell", "rarity": "epic",
+      "targets": "ground_and_air", "deploy_side": "any",
+      "ability": { "type": "area_damage", "effect": "dot", "duration_sec": 8 },
+      "template_file": "poison.png"
+    },
+    "goblin_barrel": {
+      "elixir_cost": 3, "type": "spell", "rarity": "epic",
+      "targets": "ground", "deploy_side": "any",
+      "ability": { "type": "on_deploy_spawn", "spawns": "goblins", "count": 3 },
+      "template_file": "goblin_barrel.png"
+    },
+    "earthquake": {
+      "elixir_cost": 3, "type": "spell", "rarity": "rare",
+      "targets": "ground", "deploy_side": "any",
+      "ability": { "type": "area_damage", "effect": "slow", "duration_sec": 6 },
+      "template_file": "earthquake.png"
+    },
+    "graveyard": {
+      "elixir_cost": 5, "type": "spell", "rarity": "legendary",
+      "targets": "ground", "deploy_side": "any",
+      "ability": { "type": "periodic_spawn", "spawns": "skeletons", "count": 1, "interval_sec": 1.5, "duration_sec": 10 },
+      "template_file": "graveyard.png"
+    },
+    "tornado": {
+      "elixir_cost": 3, "type": "spell", "rarity": "epic",
+      "targets": "ground_and_air", "deploy_side": "any",
+      "ability": { "type": "area_damage", "effect": "pull_to_center", "duration_sec": 3 },
+      "template_file": "tornado.png"
+    },
+    "rage": {
+      "elixir_cost": 2, "type": "spell", "rarity": "rare",
+      "targets": "ground_and_air", "deploy_side": "any",
+      "ability": { "type": "area_damage", "effect": "speed_and_damage_boost", "duration_sec": 6 },
+      "template_file": "rage.png"
+    },
+    "clone": {
+      "elixir_cost": 3, "type": "spell", "rarity": "epic",
+      "targets": "ground_and_air", "deploy_side": "any",
+      "ability": { "type": "area_damage", "effect": "clone_troops_in_area" },
+      "template_file": "clone.png"
+    },
+    "mirror": {
+      "elixir_cost": 1, "type": "spell", "rarity": "epic",
+      "targets": "none", "deploy_side": "any",
+      "ability": { "type": "on_deploy_spawn", "effect": "copy_last_card_plus_1_elixir" },
+      "template_file": "mirror.png"
+    },
+    "barbarian_barrel": {
+      "elixir_cost": 2, "type": "spell", "rarity": "epic",
+      "targets": "ground", "deploy_side": "any",
+      "ability": { "type": "on_deploy_spawn", "spawns": "barbarian", "count": 1 },
+      "template_file": "barbarian_barrel.png"
+    },
+    "royal_delivery": {
+      "elixir_cost": 3, "type": "spell", "rarity": "common",
+      "targets": "ground", "deploy_side": "any",
+      "ability": { "type": "on_deploy_spawn", "spawns": "royal_recruit", "count": 1 },
+      "template_file": "royal_delivery.png"
+    },
+    "the_log": {
+      "elixir_cost": 2, "type": "spell", "rarity": "legendary",
+      "targets": "ground", "deploy_side": "any",
+      "ability": { "type": "area_damage", "effect": "knockback" },
+      "template_file": "the_log.png"
+    },
+    "snowball": {
+      "elixir_cost": 2, "type": "spell", "rarity": "common",
+      "targets": "ground_and_air", "deploy_side": "any",
+      "ability": { "type": "area_damage", "effect": "knockback_and_slow" },
+      "template_file": "snowball.png"
+    },
+    "giant_snowball": {
+      "elixir_cost": 2, "type": "spell", "rarity": "common",
+      "targets": "ground_and_air", "deploy_side": "any",
+      "ability": { "type": "area_damage", "effect": "knockback_and_slow" },
+      "template_file": "giant_snowball.png"
+    },
+    "cannon": {
+      "elixir_cost": 3, "type": "building", "rarity": "common",
+      "targets": "ground", "deploy_side": "our",
+      "ability": { "type": "none" },
+      "template_file": "cannon.png"
+    },
+    "mortar": {
+      "elixir_cost": 4, "type": "building", "rarity": "common",
+      "targets": "ground", "deploy_side": "our",
+      "ability": { "type": "none" },
+      "template_file": "mortar.png"
+    },
+    "tesla": {
+      "elixir_cost": 4, "type": "building", "rarity": "common",
+      "targets": "ground_and_air", "deploy_side": "our",
+      "ability": { "type": "none" },
+      "template_file": "tesla.png"
+    },
+    "inferno_tower": {
+      "elixir_cost": 5, "type": "building", "rarity": "rare",
+      "targets": "ground_and_air", "deploy_side": "our",
+      "ability": { "type": "none" },
+      "template_file": "inferno_tower.png"
+    },
+    "bomb_tower": {
+      "elixir_cost": 4, "type": "building", "rarity": "rare",
+      "targets": "ground", "deploy_side": "our",
+      "ability": { "type": "none" },
+      "template_file": "bomb_tower.png"
+    },
+    "x_bow": {
+      "elixir_cost": 6, "type": "building", "rarity": "epic",
+      "targets": "ground", "deploy_side": "our",
+      "ability": { "type": "none" },
+      "template_file": "x_bow.png"
+    },
+    "tombstone": {
+      "elixir_cost": 3, "type": "building", "rarity": "rare",
+      "targets": "ground", "deploy_side": "our",
+      "ability": { "type": "periodic_spawn", "spawns": "skeletons", "count": 1, "interval_sec": 2.5 },
+      "template_file": "tombstone.png"
+    },
+    "goblin_hut": {
+      "elixir_cost": 5, "type": "building", "rarity": "rare",
+      "targets": "ground", "deploy_side": "our",
+      "ability": { "type": "periodic_spawn", "spawns": "spear_goblins", "count": 1, "interval_sec": 6 },
+      "template_file": "goblin_hut.png"
+    },
+    "barbarian_hut": {
+      "elixir_cost": 6, "type": "building", "rarity": "rare",
+      "targets": "ground", "deploy_side": "our",
+      "ability": { "type": "periodic_spawn", "spawns": "barbarians", "count": 2, "interval_sec": 10 },
+      "template_file": "barbarian_hut.png"
+    },
+    "furnace": {
+      "elixir_cost": 4, "type": "building", "rarity": "rare",
+      "targets": "ground_and_air", "deploy_side": "our",
+      "ability": { "type": "periodic_spawn", "spawns": "fire_spirits", "count": 2, "interval_sec": 8 },
+      "template_file": "furnace.png"
+    },
+    "elixir_collector": {
+      "elixir_cost": 6, "type": "building", "rarity": "rare",
+      "targets": "none", "deploy_side": "our",
+      "ability": { "type": "passive_aura", "effect": "generate_elixir_over_time" },
+      "template_file": "elixir_collector.png"
+    }
+  }
+}
