@@ -125,14 +125,22 @@ class App:
             self.overlay = OverlayPanel(game_window_rect=game_rect,
                                         refresh_ms=OVERLAY_REFRESH_MS)
             self.overlay.show_waiting()
-            self.overlay.show()
         else:
             self.overlay = None
 
-        # ── Main loop timer (drives capture + detection) ───────────────
+        # ── Main loop timer ────────────────────────────────────────────
+        # Defer both overlay.show() and timer.start() via singleShot(0)
+        # so they fire on the first tick of exec_() — the event loop must
+        # be running before Qt can render windows or fire timers reliably.
         self._loop_timer = QTimer()
         self._loop_timer.timeout.connect(self._loop_tick)
-        self._loop_timer.start(int(FRAME_INTERVAL * 1000))
+
+        def _deferred_start() -> None:
+            if self.overlay:
+                self.overlay.show()
+            self._loop_timer.start(int(FRAME_INTERVAL * 1000))
+
+        QTimer.singleShot(0, _deferred_start)
 
         print("[main] ── Ready ─────────────────────────────────────────────")
         print("[main] Press SPACE when 'FIGHT!' appears to start tracking.")
